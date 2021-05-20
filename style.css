@@ -52,7 +52,6 @@ section
     object-fit: cover;
     filter: blur(1px);
     border-radius: 15px;
-    backdrop-filter: ;
     width: 395px;
     height: 100px;
     align-items: center;
@@ -72,8 +71,21 @@ section
     margin: 2px;
     padding: 25px,25px ;
     justify-content: center;
-    color: seashell;
+    color: black;
+    font-weight: bold;
 }
+
+th:hover
+{
+    background-color:rgb(241, 231, 231);
+   
+}
+
+td:hover
+{
+    background-color:rgb(241, 231, 231);
+}
+
 table
 {
     display: table-cell;
