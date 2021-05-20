@@ -6,6 +6,7 @@
     font-family: 'Popppins',sans-serif;
 }
 
+
 section
 {
     position: relative;
@@ -15,28 +16,12 @@ section
     min-height: 100vh;
     background-color: #161623;
     overflow: hidden;
-}
-
-section::before
-{
-    content: '';
-    position: absolute;
-    width: 400px;
-    height: 400px;
-    background: linear-gradient(#c51256,#dfa507);
-    border-radius: 50%;
-    transform: translate(-250px,-120px);
-}
-
-section::after
-{
-    content: '';
-    position: absolute;
-    width: 350px;
-    height: 350px;
-    background: linear-gradient(#035ba3,#31ff38);
-    border-radius: 50%;
-    transform: translate(250px,150px);
+    background-image: url("photo.png");
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position:center center;
 }
 
 .Calendar
@@ -53,21 +38,57 @@ section::after
     background: rgba(255, 255,255, 0.1);
     box-shadow:0 25px 45px rgba(255,255,255,0.1);
     border:1px solid rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(25px);
     border-radius: 10px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: stretch;
     align-items: center;
+    
 }
 
 #Cal-Month
 {
-    text-align: center;
-    margin: auto;
-    width: 400px;
-    height: 400px;
-    padding: 25px;
+    background-image: url("photo.png");
+    object-fit: cover;
+    filter: blur(1px);
+    border-radius: 15px;
+    backdrop-filter: ;
+    width: 395px;
+    height: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     letter-spacing: 1px;
-    color: seashell;
+    flex-grow: 50;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    font-weight: bolder;
     
 }
+
+#Cal-Week_Date
+{
+    text-align: center;
+    margin: 2px;
+    padding: 25px,25px ;
+    justify-content: center;
+    color: seashell;
+}
+table
+{
+    display: table-cell;
+    border: 1px ;
+    border-collapse: separate;
+    border-spacing:10px ;
+}
+
+.multicolortext
+{
+    background-image:linear-gradient(#ee6110,#4afc50);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    z-index: 1000;
+}
+
