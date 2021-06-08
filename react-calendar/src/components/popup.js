@@ -4,6 +4,7 @@ import '../popup.css';
 
 function Popup(props) {
 
+
     const [getPopups, setGetPopups] = useState([])
     const[popups, setPopups] = useState("")
 
@@ -27,11 +28,12 @@ function Popup(props) {
         const newPopup = {
             id : new Date().getTime(),
             text: popups,
-            completed:false,
+            completed:true,
         }
 
         setGetPopups([...getPopups].concat(newPopup))
         setPopups("")
+        
     }
 
     const deleteEvent = (id) => {
@@ -54,7 +56,7 @@ function Popup(props) {
             <div className="show-data">
             {getPopups.map((popups) => 
                 <div className="eventData"> 
-                    <p>{popups.text}</p>
+                    <p> {popups.text}</p>
                     <button><i className="fas fa-times-circle" onClick = {() => deleteEvent(popups.id)}></i></button>
                 </div>)}
             </div>

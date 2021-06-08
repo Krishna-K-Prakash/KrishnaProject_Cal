@@ -8,15 +8,15 @@ const Calendar = () => {
   const [popupOnClick,setPopupOnClick] = useState(false);
   
   return(
-      <div class="container">
-            <div class="calendar">
-                <div class="month">
-                  <i class="fas fa-angle-left prev" onClick={getPrevMonth}></i>
-                    <div class="date">
+      <div className="container">
+            <div className="calendar">
+                <div className="month">
+                  <i className="fas fa-angle-left prev" onClick={getPrevMonth}></i>
+                    <div className="date">
                       <span>{`${monthNames[selectedDate.getMonth()]}`}</span>
                        <span>{`${selectedDate.getFullYear()}`}</span>
                    </div>
-                 <i class="fas fa-angle-right next" onClick={getNextMonth}></i>
+                 <i className="fas fa-angle-right next" onClick={getNextMonth}></i>
                </div>
                <div className="space">
                   <table className="tab">
